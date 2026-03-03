@@ -10,6 +10,7 @@ pub use general::libwaku_response::LibwakuResponse;
 
 // Required so functions inside libwaku can call RLN functions even if we
 // use it within the bindings functions
+#[cfg(feature = "rln-relay")]
 #[allow(clippy::single_component_path_imports)]
 #[allow(unused)]
 use rln;

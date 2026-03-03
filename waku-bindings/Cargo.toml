@@ -31,7 +31,7 @@ url = "2.3"
 waku-sys = { version = "1.0.0", path = "../waku-sys" }
 libc = "0.2"
 serde-aux = "4.3.1"
-rln = "0.3.4"
+rln = { version = "0.3.4", optional = true }
 tokio = { version = "1", features = ["full"] }
 regex = "1"
 chrono = "0.4"
@@ -41,3 +41,7 @@ uuid = { version = "1.3", features = ["v4"] }
 futures = "0.3.25"
 serial_test = "1.0.0"
 tokio = { version = "1.24.2", features = ["macros", "rt", "sync", "time"] }
+
+[features]
+default = ["rln-relay"]
+rln-relay = ["rln"]
